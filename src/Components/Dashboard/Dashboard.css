@@ -1,0 +1,21 @@
+.app {
+  background: rgba(0,0,0,0.5);
+  background-color: #43ED3F;
+  height: 100%;
+  height: 500px;
+
+}
+
+.dashboardContainer {
+  overflow-y: scroll;
+  height: 500px;
+
+  background-color: #43ED3F;
+}
+
+.addButton {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(190, 227, 67);
+}

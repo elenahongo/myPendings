@@ -1,0 +1,23 @@
+
+
+.formField {
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #4d4a4a;
+  height: 30px;
+  color: #4d4a4a;
+  min-width: 50px;
+}
+
+label {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.textArea {
+  height: 80px;
+}
+
+.error {
+  color: red
+}

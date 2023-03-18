@@ -1,0 +1,27 @@
+.pendingContainer {
+  max-width: 250px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: move;
+  border: 1px solid #000;
+}
+
+.onTime {
+  background-color: #fff;
+}
+
+.criticalTime {
+  background-color: #ffd6d6;
+}
+
+.pendingText {
+  font-size: 14px;
+}
+.pendingData {
+  font-size: 11px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
