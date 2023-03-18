@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# My pendings app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Please, share the link to the repository and create a well-defined README file to run the application locally. I
 
-## Available Scripts
+## Run the app locally
 
-In the project directory, you can run:
+In the project directory, you can run first:
 
+### `npm install`
+
+Once completed the installation, run:
 ### `npm start`
 
-Runs the app in the development mode.\
+Now the app must be running in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Key Features:
 
-### `npm test`
+The purpose of this app is to allow you tracking your pendings.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+	• You can create pending cards by clickling on the button with a plus icon in the app. Once clicked, a modal will be displayed, fill the form contained there. You must provide:
+    - Priority: required, default to 'Medium'
+    - Text: act as a description for your pending, is required and is not allowed to be repeated with other previously created pendings 
+    - Status: Statuses allowed: Active, Done, default to 'Active'
+    - Due date: Not validated, default to today
 
-### `npm run build`
+	• Once you submit the form, if you selected Active as the status for your new Pending, a new card will appear in the dashboard and the Active counter on the bottom will increase by 1. Otherwise, if you selected the status 'Done' the count for pendings done will increase by 1 and the pending card wont be displayed in the dashboard.  If the tasks should be completed within the current or the next day, the card color should be #FFD6D6. Otherwise, the color is #FFFFFF.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+	• Only active tasks will appear in the dashboard, by clicking the check icon in the card you can mark the pendings as "Done". By clicking the trash can icon you'll delete the pending task. Both actions will cause the pending task to disappear from the dashboard. The "Active" and "Done" counters are incremented or decremented according to the action performed.
+	
+  • You can drag the pending card is draggable to place it wherever you want in the Dashboard area.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Technologies and libraries used:
 
-### `npm run eject`
+  This application uses react and take advantage of stateful components keep track of the data and performe the required updates on it.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  This app uses the following libraries for this purposes:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    - fortawesome: display icons from broad icons library
+    - bootstrap: nice library for add spacing to the components easily and display well styled Modal
+    - formik: keep track of values/errors/visited fields, orchestrating validation, and handling submission
+    - lodash: basic utils as capitalize words
+    - moment: used for creating, parsing, formatting and compare dates
+    - react-draggable: library to improve drag and drop user experience compared to using useState to update css properties by x,y - variables in absolute css position
+    - yup: form inputs validation through built-in methods 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This app has been deployed in githubpages on https://elenahongo.github.io/myPendings/
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Deployments are triggered using this command:
+### `npm run deploy`
