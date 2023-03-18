@@ -1,6 +1,11 @@
 # My pendings app
 
-Please, share the link to the repository and create a well-defined README file to run the application locally. I
+### Deployment
+
+This app has been deployed in githubpages on https://elenahongo.github.io/myPendings/
+
+Deployments are triggered using this command:
+### `npm run deploy`
 
 ## Run the app locally
 
@@ -44,11 +49,3 @@ The purpose of this app is to allow you tracking your pendings.
     - moment: used for creating, parsing, formatting and compare dates
     - react-draggable: library to improve drag and drop user experience compared to using useState to update css properties by x,y - variables in absolute css position
     - yup: form inputs validation through built-in methods 
-
-
-### Deployment
-
-This app has been deployed in githubpages on https://elenahongo.github.io/myPendings/
-
-Deployments are triggered using this command:
-### `npm run deploy`
