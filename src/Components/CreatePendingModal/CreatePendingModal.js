@@ -5,9 +5,22 @@ import PendingSchema from './ValidationSchema';
 
 import './CreatePendingModal.css'
 
-const CreatePendingModal = ({ show, handleClose, handleSubmit }) => {
+const CreatePendingModal = ({
+  show,
+  handleClose,
+  handleSubmit,
+  activePendings,
+}) => {
   const today = new Date();
   const date = today.toISOString().substring(0, 10);
+
+  const validatePendingText = (value) => {
+    let error;
+    if (activePendings.findIndex((element) => element.text === value) !== -1) {
+      error = 'Text must be unique';
+    }
+    return error;
+  }
 
   return (
     <Modal show={show} onHide={handleClose}>
@@ -33,13 +46,30 @@ const CreatePendingModal = ({ show, handleClose, handleSubmit }) => {
                   <option value="medium">Medium</option>
                   <option value="low">Low</option>
                 </Field>
-                <ErrorMessage className='error' name="priority" component="div" />
+                <ErrorMessage
+                  className='error'
+                  name="priority"
+                  component="div"
+                />
                 <label htmlFor="text">Text</label>
-                <Field as='textarea' className="formField textArea" type="text" name="text" />
-                <ErrorMessage className='error' name="text" component="div" />
+                <Field
+                  as='textarea'
+                  className="formField textArea"
+                  type="text"
+                  name="text"
+                  validate={validatePendingText} />
+                <ErrorMessage
+                  className='error'
+                  name="text"
+                  component="div"
+                />
                 <label htmlFor="dueDate">Due Date</label>
                 <Field className="formField" type="date" name="dueDate" />
-                <ErrorMessage className='error' name="dueDate" component="div" />
+                <ErrorMessage
+                  className='error'
+                  name="dueDate"
+                  component="div"
+                />
                 <label htmlFor="status">Status</label>
                 <Field
                   className="formField"
@@ -49,7 +79,11 @@ const CreatePendingModal = ({ show, handleClose, handleSubmit }) => {
                   <option value="active">Active</option>
                   <option value="done">Done</option>
                 </Field>
-                <ErrorMessage className='error' name="status" component="div" />
+                <ErrorMessage
+                  className='error'
+                  name="status"
+                  component="div"
+                />
               </div>
               <Button
                 className='mt-4'
@@ -64,8 +98,7 @@ const CreatePendingModal = ({ show, handleClose, handleSubmit }) => {
           )}
         </Formik>
       </Modal.Body>
-
-    </Modal>
+    </Modal >
   );
 }
 

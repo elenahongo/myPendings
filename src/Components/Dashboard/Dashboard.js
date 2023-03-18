@@ -7,12 +7,12 @@ import Pending from '../Pending/Pending';
 import './Dashboard.css';
 
 const Dashboard = ({
-  pendings,
+  activePendings,
   handleAddPending,
   handleCompletePending,
   handleDeletePending,
 }) => {
-  const [displayModal, setDisplayModal] = useState(true)
+  const [displayModal, setDisplayModal] = useState(false)
 
   const handleSubmit = (values) => {
     console.log(values)
@@ -29,7 +29,7 @@ const Dashboard = ({
         <button className="addButton mx-2" onClick={handleShow}>
           <FontAwesomeIcon icon={faPlus} size="5x" />
         </button>
-        {pendings.map((pending) => (
+        {activePendings.map((pending) => (
           <Pending
             handleCompletePending={handleCompletePending}
             handleDeletePending={handleDeletePending}
@@ -43,6 +43,7 @@ const Dashboard = ({
           handleClose={handleClose}
           show={displayModal}
           handleSubmit={handleSubmit}
+          activePendings={activePendings}
         />
       )}
     </>

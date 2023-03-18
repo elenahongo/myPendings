@@ -47,7 +47,7 @@ const App = () => {
       <h1 className='text-center py-2'>My pendings</h1>
       <div className="item dashboard px-5 py-5">
         <Dashboard
-          pendings={activePendings}
+          activePendings={activePendings}
           handleAddPending={handleAddPending}
           handleCompletePending={handleCompletePending}
           handleDeletePending={handleDeletePending}
