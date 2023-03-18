@@ -1,9 +1,9 @@
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
+
 import CreatePendingModal from '../CreatePendingModal/CreatePendingModal';
 import Pending from '../Pending/Pending';
-
 import './Dashboard.css';
 
 const Dashboard = ({

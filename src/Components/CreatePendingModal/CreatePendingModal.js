@@ -1,8 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import PendingSchema from './ValidationSchema';
 
+import PendingSchema from './ValidationSchema';
 import './CreatePendingModal.css'
 
 const CreatePendingModal = ({

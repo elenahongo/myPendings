@@ -1,5 +1,3 @@
-
-
 .formField {
   display: block;
   border-radius: 5px;
@@ -19,5 +17,5 @@ label {
 }
 
 .error {
-  color: red
+  color: red;
 }

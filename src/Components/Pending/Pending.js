@@ -7,7 +7,6 @@ import Draggable from 'react-draggable'
 
 import './Pending.css';
 
-
 const Pending = ({
   id,
   priority,
@@ -18,12 +17,12 @@ const Pending = ({
   dueDate,
 }) => {
 
-  let tomorrow = moment().add(1,'days');
+  let tomorrow = moment().add(1, 'days');
 
   return (
     <Draggable>
       <div
-        className={`pendingContainer px-3 mx-2 mb-3 ${moment(dueDate).isAfter(tomorrow, 'day') ? 'onTime' : 'criticalTime' }`}
+        className={`pendingContainer px-3 mx-2 mb-3 ${moment(dueDate).isAfter(tomorrow, 'day') ? 'onTime' : 'criticalTime'}`}
       >
         <p className='pendingText my-2'>
           {text}
